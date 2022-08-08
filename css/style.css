@@ -6,11 +6,11 @@ body{
     background-size: cover; 
 }
 .calendar{
-    background-color: sandybrown;
+    
     position: fixed;
     right: 15px;
     top: 15px;
-    height: 40px;
+    font-size: 30px;
 }
 .container{
     max-width: 1050px;
@@ -144,33 +144,30 @@ body{
     border-radius: 20px;
     width: 350px;
     margin-top: 15px;
-    height: 30px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px;
-    flex: 1;
     cursor: pointer;
     font-size: 24px;
-    transition: all 1.15s;
 }
-.delete-icon{
-    border-radius: 40px;
-    padding: 2px 15px;
-    transition: all 0.5s;
-    width: 40px;
-    height: 20px;
-}
-.trash{
+
+.icon{
     width: 20px;
-    height: 30px;
-    padding-bottom: 12px;
+    height: 25px;
+    flex-basis: 10;
+    margin-right: 4px;
 }
-.li:hover{
-    background-color: rgb(226, 247, 226);
-     color: black;
+.icon:hover{
+    transform: scale(1.5);
 }
+
 #ul{
     display: flex;
     flex-direction: column;
+}
+.done{
+    background-color: green;
+    color: white;
 }

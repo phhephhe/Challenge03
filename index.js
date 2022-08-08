@@ -1,69 +1,71 @@
-// let weekday = document.querySelectorAll('.week-day')
-// let container = document.getElementById('container')
-// let day = document.getElementById('day')
-// let openMonday = document.getElementById('open-monday')
-// let openTuesday = document.getElementById('open-tuesday')
-// let openWednesday = document.getElementById('open-wednesday')
-// let openThursday = document.getElementById('open-thursday')
-// let openFriday = document.getElementById('open-friday')
-// let openSaturday = document.getElementById('open-saturday')
-// let openSunday = document.getElementById('open-sunday')
-// let openNotes = document.getElementById('open-notes')
-// let dayTitle = document.getElementById('day-title')
-// weekday.forEach(item => {
-//     item.addEventListener('click', (event)=>{
-//         container.classList.add('display-none')
-//         day.classList.remove('display-none')
-//         if(event.target === openMonday){   
-//             dayTitle.innerHTML = 'Monday'
-//         }else if(event.target === openTuesday){
-//             dayTitle.innerHTML = 'Tuesday'
-//         }else if(event.target === openWednesday){
-//             dayTitle.innerHTML = 'Wednesday'
-//         }
-//         else if(event.target === openThursday){
-//             dayTitle.innerHTML = 'Thursday'
-//         }
-//         else if(event.target === openFriday){
-//             dayTitle.innerHTML = 'Friday'
-//         }
-//         else if(event.target === openSaturday){
-//             dayTitle.innerHTML = 'Saturday'
-//         }
-//         else if(event.target === openSunday){
-//             dayTitle.innerHTML = 'Sunday'
-//         }
-//         else if(event.target === openNotes){
-//             dayTitle.innerHTML = 'Make notes'
-//         }
-//     })
-// })
-
-
-
-
-
-
-
-
-
-
 let btnAdd = document.getElementById('add-btn')
 let input = document.getElementById('input')
 let ul = document.getElementById('ul')
-btnAdd.addEventListener('click', ()=> {
+let form = document.getElementById('form')
+
+const todoList = [];
+
+form.addEventListener('submit', (event)=> {
+    // console.log(event.target.input.value);
+    event.preventDefault()
+    // TODO
+    if(!input.value.trim()){
+        alert('You must write something')
+    }else{
+    todoList.push({
+        todo: input.value
+    })
+    updateHTML({todo: input.value})
+}
+})
+
+function updateHTML(todo){
+    createElement(todo)
+}
+
+
+function createElement(todo){
+    
     let li = document.createElement('li')
     let div = document.createElement('div')
-    
-    div.textContent = 'X'
-    div.classList.add('delete-icon')
-    li.textContent = input.value
+    let img = document.createElement('img')
+    img.src = 'photos/trash.png'
+    img.classList.add('icon')
+    img.addEventListener('click',()=> {
+        li.remove()
+    })
+    let img2 = document.createElement('img')
+    img2.src = 'photos/favicon.png'
+    img2.classList.add('icon')
+    img2.addEventListener('click',()=>{
+        li.classList.add('done')
+    })
+
+    div.appendChild(img2)
+    div.appendChild(img)
+
+    li.textContent = todo.todo
     li.classList.add('li')
+
     li.appendChild(div)
+    
     ul.appendChild(li)
    
-    
     input.value = " "
-    //focus and enter
+    input.focus()
+}
 
-})
+
+// calendar
+const now = new Date();
+const weekDay = new Date().toLocaleString(
+  'default', {weekday: 'long'}
+);
+console.log(weekDay);
+const withPmAm = now.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  
+const weekDayName = document.getElementById('calendar')
+weekDayName.innerHTML = weekDay + " " + withPmAm
