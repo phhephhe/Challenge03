@@ -1,0 +1,16 @@
+@media (max-width: 1050px)  {
+    .back-button{
+        width: 85px;
+    }
+    .week-day-personal{
+        margin-top: 100px;
+        transform: scale(1.5);
+    }
+}
+@media (max-width: 815px){
+    .week-day-personal{
+        transform: scale(1.2);
+        width: 90%;
+    }
+
+}

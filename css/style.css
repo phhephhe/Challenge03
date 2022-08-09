@@ -11,7 +11,7 @@ background: radial-gradient(circle, rgb(37, 107, 131) 59%, rgba(0,0,0) 100%);
 
 }
 .back-button{
-    width: 50px;
+    width: 55px;
     position: fixed;
     left: 15px;
     top: 15px;
@@ -203,6 +203,9 @@ background: radial-gradient(circle, rgb(37, 107, 131) 59%, rgba(0,0,0) 100%);
 #ul{
     display: flex;
     flex-direction: column;
+    max-height: 500px;
+    height: 100%;
+    overflow: scroll;
 }
 .done{
     background-color: green;
@@ -241,11 +244,11 @@ background: radial-gradient(circle, rgb(37, 107, 131) 59%, rgba(0,0,0) 100%);
     opacity: 0;
     animation-name: set;
     animation-delay: 5s;
-    animation-duration: 1.5s;
-    animation-iteration-count: 4;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
     color: orange;
     text-shadow: 10px 10px 20px red;
-    animation-timing-function: ease-in;
+    /* animation-timing-function: ease; */
 }
 .go{
     color: green;
@@ -256,8 +259,8 @@ background: radial-gradient(circle, rgb(37, 107, 131) 59%, rgba(0,0,0) 100%);
     transform: translate(-50%,-50%);
     opacity: 0;
     animation-name: go;
-    animation-delay: 11s;
-    animation-duration: 1s;
+    animation-delay: 10s;
+    animation-duration: 0.9s;
     animation-iteration-count: 5;
     text-shadow: 10px 10px 20px black;
 
