@@ -9,24 +9,23 @@
     <title>Make today's to-doList</title>
 </head>
 <body>
-    <h1 class="ready">Ready...</h1>
-    <h1 class="set">Set</h1>
-    <h1 class="go">Go!</h1>
     <a href="index.html"><img class="back-button" src="./photos/back-button.png" alt="back"></a>
     <div id="calendar" class="calendar"></div>
-   <form id="form"> 
-       <div id="day" class="week-day-personal">
-            <h1 id="day-title">to-do list</h1>
-            <div>
-                <input id="input" type="text" placeholder="Add task...">
-                <input id="add-btn" type="submit" value="Add">
-            </div>
-            <ul id="ul">
-                
-            </ul>
+    <form class="week-day-personal" id="form">
+        <div></div>
+        <h1 class="notes-title">Notes</h1>
+        <div>
+            <input id="input" type="text" placeholder="Add note...">
+            <input id="add-btn" type="submit" value="Add">
             
         </div>
+        <ul id="ul">
+            
+        </ul>
     </form>
+
+
+
     <script src="index.js"></script>
 </body>
 </html>

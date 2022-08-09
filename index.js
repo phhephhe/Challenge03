@@ -2,8 +2,12 @@ let btnAdd = document.getElementById('add-btn')
 let input = document.getElementById('input')
 let ul = document.getElementById('ul')
 let form = document.getElementById('form')
+let divForText = document.getElementById('day')
+
 
 const todoList = [];
+
+
 
 form.addEventListener('submit', (event)=> {
     // console.log(event.target.input.value);
@@ -48,12 +52,16 @@ function createElement(todo){
     li.classList.add('li')
 
     li.appendChild(div)
-    
+    if(li <= 5){
+        console.log('123');
+    }   
     ul.appendChild(li)
-   
     input.value = " "
     input.focus()
+       
 }
+
+
 
 
 // calendar
@@ -61,11 +69,13 @@ const now = new Date();
 const weekDay = new Date().toLocaleString(
   'default', {weekday: 'long'}
 );
-console.log(weekDay);
+
 const withPmAm = now.toLocaleTimeString('en-US', {
     hour: '2-digit',
     minute: '2-digit',
   });
   
 const weekDayName = document.getElementById('calendar')
+weekDayName.style.color = 'red'
+weekDayName.style.textShadow = '5px 5px 20px white'
 weekDayName.innerHTML = weekDay + " " + withPmAm
