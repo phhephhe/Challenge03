@@ -7,10 +7,46 @@
         transform: scale(1.5);
     }
 }
-@media (max-width: 815px){
+@media (max-width: 675px){
     .week-day-personal{
         transform: scale(1.2);
         width: 90%;
     }
-
+}
+@media (max-width:450px) {
+    .li, #input, #add-btn{
+        scale: 0.8;
+    }
+}
+/* main page */
+@media (max-width:1040px) {
+    .weekdays-container{
+        display: none;
+    }
+    .responsive-container{
+        display: block;
+    }
+}
+@media (max-width:600px) {
+    .responsive-grid-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .title{
+        max-width: 300px;
+        width: 90%;
+        font-size: 30px;
+        margin: 0 auto;
+    }
+    .responsive-grid-container div{
+        width: 320px;
+        margin: 0 auto;
+    }
+    .responsive-grid-container div a{
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+    }
 }
