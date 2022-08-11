@@ -4,7 +4,8 @@
 }
 #body{
     height: 100vh;
-    background: linear-gradient(0deg,  rgba(252,252,252,1) 30%,rgb(23, 112, 82) 100%);
+    background: rgb(171,246,163);
+    background: radial-gradient(circle, rgba(171,246,163,1) 30%, rgba(88,194,123,1) 100%);
  }
    .back-button{
     width: 55px;
