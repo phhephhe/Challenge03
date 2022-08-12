@@ -4,9 +4,9 @@
 }
 #body{
     height: 100vh;
-    background: rgb(171,246,163);
-    background: radial-gradient(circle, rgba(171,246,163,1) 30%, rgba(88,194,123,1) 100%);
- }
+    background: rgb(11,208,187);
+    background: linear-gradient(180deg, rgba(11,208,187,1) 34%, rgba(255,255,255,1) 87%);
+}
    .back-button{
     width: 55px;
     position: fixed;
