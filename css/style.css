@@ -128,9 +128,6 @@
     transform: scale(1.2); 
 }
 
-
-
-
 /* todo list */
 .week-day-personal{
     font-size: 45px;
@@ -144,33 +141,6 @@
     text-align: center;
 }
 
-/* .week-day-personal{
-    background-image: url(../photos/ready.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 60%;
-    width: 100%;
-    max-height: 70%;
-    height: 100%;
-    border-radius: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-} */
-/* #day-title{
-    font-size: 45px;
-    margin-bottom: 20px;
-    color: black;
-    background-color: rgb(238, 216, 188);
-    padding: 10px;
-    border-radius: 7px;
-    box-shadow: 15px 15px 25px white;
-} */
 #input{
     width: 291px;
     height: 34px;
@@ -223,7 +193,7 @@
     flex-direction: column;
     max-height: 500px;
     height: 100%;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 .done{
     background-color: green;
@@ -235,7 +205,6 @@
     font-size: 45px;
     color: white;
 }
-
 
 /* Animations */
 
