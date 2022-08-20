@@ -1,8 +1,6 @@
-let btnAdd = document.getElementById('add-btn')
 let input = document.getElementById('input')
 let ul = document.getElementById('ul')
 let form = document.getElementById('form')
-let divForText = document.getElementById('day')
 
 
 const todoList = [];
@@ -52,9 +50,7 @@ function createElement(todo){
     li.classList.add('li')
 
     li.appendChild(div)
-    if(li <= 5){
-        console.log('123');
-    }   
+   
     ul.appendChild(li)
     input.value = " "
     input.focus()
